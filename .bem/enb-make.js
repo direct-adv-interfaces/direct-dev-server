@@ -7,7 +7,8 @@ module.exports = function(config) {
                 [require('enb/techs/file-provider'), { target: '?.bemdecl.js' }],
                 require('enb-bem-techs/techs/deps'),
                 require('enb-bem-techs/techs/files'),
-                [require('enb-js/techs/browser-js'), { target: '?.test.js', sourceSuffixes: ['test.js'] }]
+                [require('enb-js/techs/browser-js'), { target: '?.test.js', sourceSuffixes: ['test.js'] }],
+                [require('enb-js/techs/browser-js'), { target: '?.js', sourceSuffixes: ['js'] }]
             ]);
 
         //nodeConfig.addTargets(['?.test.js']);
