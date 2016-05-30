@@ -30,7 +30,7 @@ build/Release
 desktop.blocks
 bundles
 node_modules
-.test-server.js
+.dev-server.js
 jspm_packages
 
 # Optional npm cache directory
