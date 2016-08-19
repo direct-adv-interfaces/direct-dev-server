@@ -5,7 +5,6 @@ module.exports = {
     defaultTarget: '?.test.js',
     targets: {
         '?.js': ['js'],
-        '?.test.js': ['test.js'],
-        '?.css': ['css']
+        '?.test.js': ['test.js']
     }
 };
