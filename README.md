@@ -18,7 +18,7 @@ node lib/cli --bundle <enb_node_name>
 Конфиг должен лежать в корневой директории и называться `.dev-server.js`.
 
 Пример конфига:
-```
+```js
 module.exports = {
     baseUrl: 'test.bundles',        // базовый адрес веб-сервера
     bundles: 'bundles',             // папка с бандлами
@@ -26,6 +26,7 @@ module.exports = {
       'common.blocks'               // (в них будут отслеживаться изменения файлов)  
       'desktop.blocks'
     ],     
+    enbArgs: ['--dir', 'Bem'],      // дополнительные аргументы enb (значение: массив строк) 
     defaultTarget: '?.test.html',   // таргет начальной страницы (будет открыта в браузере при старте)
     targets: {                      // зависимости таргетов от бэм-технологий
         '?.js': ['js'],
