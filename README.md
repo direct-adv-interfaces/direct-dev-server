@@ -1,6 +1,12 @@
 # direct-dev-server
 Веб-сервер для заданной ENB-ноды с автоматической сборкой при изменении исходных файлов.
 
+## Установка
+
+```
+npm i direct-dev-server -D
+```
+
 ## Как запустить
 ```
 node lib/cli --bundle <enb_node_name>
@@ -20,13 +26,13 @@ node lib/cli --bundle <enb_node_name>
 Пример конфига:
 ```js
 module.exports = {
+    baseDir: 'example-project',     // основная папка проекта
     baseUrl: 'test.bundles',        // базовый адрес веб-сервера
     bundles: 'bundles',             // папка с бандлами
     levels: [                       // список уровней переопределения
       'common.blocks'               // (в них будут отслеживаться изменения файлов)  
       'desktop.blocks'
     ],     
-    enbArgs: ['--dir', 'Bem'],      // дополнительные аргументы enb (значение: массив строк) 
     defaultTarget: '?.test.html',   // таргет начальной страницы (будет открыта в браузере при старте)
     targets: {                      // зависимости таргетов от бэм-технологий
         '?.js': ['js'],
