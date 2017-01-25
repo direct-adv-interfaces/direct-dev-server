@@ -28,9 +28,9 @@ node lib/cli --bundle <enb_node_name>
 module.exports = {
     baseDir: 'example-project',     // основная папка проекта
     baseUrl: 'test.bundles',        // базовый адрес веб-сервера
-    bundles: 'bundles',             // папка с бандлами
+    bundles: 'bundles',             // путь к папке с бандлами относительно корня проекта (baseDir) 
     levels: [                       // список уровней переопределения
-      'common.blocks'               // (в них будут отслеживаться изменения файлов)  
+      'common.blocks',              // (в них будут отслеживаться изменения файлов)  
       'desktop.blocks'
     ],     
     defaultTarget: '?.test.html',   // таргет начальной страницы (будет открыта в браузере при старте)
